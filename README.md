@@ -64,8 +64,8 @@ Si apenas comienzan con LaTeX o no usan muchas figuras de `pgf`, pueden eliminar
 
    ```
    xelatex -synctex=1 -interaction=nonstopmode --output-directory=./build --shell-escape %.tex
-   makeindex -t %.glg -s %.ist -o %.gls %.glo
-   makeindex -t %.alg -s %.ist -o %.acr %.acn
+   makeindex -t ./build/%.glg -s ./build/%.ist -o ./build/%.gls ./build/%.glo
+   makeindex -t ./build/%.alg -s ./build/%.ist -o ./build/%.acr ./build/%.acn
    biber --output-directory=./build %
    ```
 
