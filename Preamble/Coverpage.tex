@@ -1,0 +1,118 @@
+\begingroup
+\BellMT
+
+\tikzexternaldisable
+\begin{tikzpicture}[remember picture,overlay,shorten >= -10pt]
+
+	\coordinate (top) at ([yshift=-20mm]current page.north);
+	\coordinate (top-right) at ([xshift=-25mm, yshift=-20mm]current page.north east);
+	\coordinate (bottom-right) at ([xshift=-25mm, yshift=20mm]current page.south east);
+	\coordinate (top-left) at ([xshift=25mm, yshift=-20mm]current page.north west);
+	\coordinate (bottom-left) at ([xshift=25mm, yshift=20mm]current page.south west);
+	
+	% Líneas de decoración
+	\begin{scope}[black]
+		\foreach \x in {0, ..., 4}{
+			\draw[line width=isodd(\x) ? 2pt : 1pt]([
+					xshift=\x mm,
+					yshift=-55mm
+				]top-left)
+				-- 
+				([
+					xshift=\x mm,
+					yshift=45.7mm]
+			bottom-left);
+		};		
+	\end{scope}
+	% Logos
+	\begin{scope}
+		\node [anchor=north] (label) at (top-left) {
+			\includegraphics[
+				width = 31.3mm,
+				height = 41.5mm,
+				keepaspectratio
+			]{logos/IPN.png}
+		};
+		\node [anchor=south] (label) at (bottom-left) {
+			\includegraphics[
+				width = 34.4mm,
+				height = 32.2mm,
+				keepaspectratio
+			]{logos/UPIITA.png}
+		};
+	\end{scope}
+	% Texto
+	\begin{scope}
+		\node [anchor=north] (IPN) at (top) {
+			\fontsize{20pt}{20pt}\selectfont
+			\bfseries
+			INSTITUTO POLITÉCNICO NACIONAL
+		};
+		\node [below of = IPN, anchor = north, yshift=0.2em] (UNIDAD) {
+			\fontsize{14pt}{14pt}\selectfont
+			\parbox{\linewidth} {
+				\centering
+				UNIDAD PROFESIONAL INTERDISCIPLINARIA\\[0.25em]
+				EN INGENIERÍA Y TECNOLOGÍAS AVANZADAS
+			}
+		};
+		\node [below of = UNIDAD, anchor = north, yshift=-1.3em] (UPIITA) {
+			\fontsize{20pt}{20pt}\selectfont
+			\addfontfeature{LetterSpace=25}
+			\bfseries
+			UPIITA
+		};
+		
+		\node [below of = UPIITA, anchor = north, yshift=-4em] (Title) {
+			\fontsize{18pt}{18pt}\selectfont
+			\Footlight
+			\parbox{0.7\linewidth} {
+				\bfseries\centering
+				\printtitle
+			}
+		};
+		
+		\node [below of = Title, anchor = north, yshift=-20mm] (Degree) {
+			\fontsize{16pt}{16pt}\selectfont
+			\parbox{0.7\linewidth} {
+				\bfseries
+				\centering
+				Que para obtener el título de\\
+				``Ingeniero en Energía''
+			}
+		};
+		
+		\node [below of = Degree, anchor = north, yshift=-20mm] (Students) {
+			\fontsize{16pt}{16pt}\selectfont
+			\parbox{0.7\linewidth} {
+				\bfseries
+				\centering
+				Presenta el alumno:\\
+				\printauthor
+			}
+		};
+		
+		\node [below of = Students, anchor = north, yshift=-4em] (Advisors) {
+			\fontsize{16pt}{16pt}\selectfont
+			\parbox{0.7\linewidth} {
+				\bfseries
+				\centering
+				Directores:\\
+				Dr. Nombre del director,\\
+				Dr. Nombre del director,\\
+				Dr. Nombre del director
+			}
+		};
+		
+		\node [below of = Advisors, anchor = north, yshift=-4em] (Principal) {
+			\fontsize{16pt}{16pt}\selectfont
+			\parbox{0.7\linewidth} {
+				\bfseries
+				\centering
+				M. en C. Adolfo Rojas Pacheco
+			}
+		};
+	\end{scope}
+\end{tikzpicture}
+\tikzexternalize
+\endgroup

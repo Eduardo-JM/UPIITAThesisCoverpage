@@ -1,0 +1,114 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document configuration
+\usepackage[english,spanish,es-tabla]{babel}
+\usepackage[
+	letterpaper,
+	top = 18mm,
+	left = 20mm,
+	right= 20mm,
+	bottom = 18mm
+]{geometry}
+
+\usepackage{ragged2e}
+\usepackage{fancyhdr}
+\usepackage{lastpage}	
+\usepackage{multicol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Fonts, encoding & Color
+
+\usepackage{fontspec}
+\usepackage{titlesec}
+%\usepackage{xunicode}
+
+\usepackage[table]{xcolor}
+\usepackage[shortlabels]{enumitem}
+\usepackage{epigraph}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Math & chem
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{siunitx}
+\usepackage{xfrac}
+\usepackage[
+	modules={reactions,formula,redox,charges}
+]{chemmacros}[2022/03/11]
+%\usepackage{chemformula}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Figures & tables
+
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{wrapfig}
+
+\usepackage{tabularray}
+\UseTblrLibrary{varwidth}
+\UseTblrLibrary{siunitx}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Drawings & shapes
+
+\usepackage{tikz}
+\usetikzlibrary{
+	shapes.geometric,
+	positioning,
+	arrows.meta,
+	calc,
+	patterns,
+	patterns.meta,
+	shadows
+}
+
+\usepackage[most]{tcolorbox}
+\tcbuselibrary{raster}
+\tcbuselibrary{external}
+\tcbset{external/prefix=boxes/}
+\tcbEXTERNALIZE
+
+\usepackage[edges,external]{forest}
+\usepackage{chemplants}
+
+\usetikzlibrary{external}
+\tikzexternalize[prefix=pictures/]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bibliography, glossary & refs
+
+\usepackage[hidelinks]{hyperref}
+\usepackage[spanish]{cleveref}
+\usepackage[
+	toc,
+	acronym,
+	translate = true,
+]{glossaries}
+\usepackage{glossary-mcols}
+
+\usepackage[
+	thresholdtype=words
+]{csquotes}
+
+\usepackage[
+	backend=biber,
+	style=ieee,
+	url=false,
+	hyperref=true
+]{biblatex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% utils
+
+\usepackage{adjustbox}
+\usepackage{pdfpages}
+%\usepackage[some]{background}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
