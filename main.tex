@@ -1,5 +1,5 @@
 \RequirePackage{fix-cm}
-\documentclass[10pt, table, letterpaper]{report}
+\documentclass[12pt, table, letterpaper]{report}
 
 \input{Preamble/Preamble.tex}
 
@@ -7,4 +7,17 @@
 	\pagenumbering{gobble}
 	\input{Preamble/Coverpage.tex}
 	\clearpage
+	\newpage
+	\input{Preamble/Signaturespage.tex}
+	
+%	\clearpage
+%	\newpage
+%	\pagenumbering{Roman}	
+%	\glsfindwidesttoplevelname[\acronymtype]
+%	\printglossary[style=custommcolalttree, type=\acronymtype, title=Abreviaciones y acrónimos, nonumberlist]
+%	\clearpage
+%	\newpage
+%	\input{Preamble/Resumen.tex}
+%	\glsfindwidesttoplevelname[\glsdefaulttype]
+%	\printglossary[style=alttree, nonumberlist]
 \end{document}
